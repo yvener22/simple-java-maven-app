@@ -23,11 +23,13 @@
   </dependencies>
   <build>
     <plugins>
-      <plugin>
+       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.17</version>
         <configuration>
-            <skipTests>true</skipTests>
+          <includes>
+            <include>**/*_UT.java</include>
+            <include>**/*_FT.java</include>
+          </includes>
         </configuration>
       </plugin>
       <plugin>
